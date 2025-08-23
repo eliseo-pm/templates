@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <type>template_big</type>
+  <user_id>1</user_id>
+  <title>Для слабовидящих</title>
+  <description>Шаблон с увеличенными шрифтами для людей со слабым зрением</description>
+    <view_image>big.jpg </view_image>
+
+</body>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <type>folder</type>
+  <title><en>Factory</en><ru>Мастерская</ru><es>Taller</es></title>
+  <description><en>For advanced users who can create their own website design template based on HTML + imported CSS</en><ru>Для опытных пользователей, которые могут создать свой собственный шаблон дизайна сайта на основе HTML + импортированный CSS</ru><es>Para usuarios avanzados que puedan crear su propia plantilla de diseño de sitio web basada en HTML + CSS importada</es></description>
+  <view_image>upload.png</view_image>
+</body>

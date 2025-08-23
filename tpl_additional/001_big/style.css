@@ -1,0 +1,134 @@
+/* установка шрифтов для всего текста*/
+
+* {
+/*	font-family:   Verdana, Arial, Tahoma, Helvetica, sans-serif;*/
+}
+
+a:link {  color: #4474f5; text-decoration: none}
+a:visited {  color: #4474f5; text-decoration: none}
+a:hover {  color: #ff0033; text-decoration: none}
+
+/* отступы от основных контейнеров */
+
+html, body, table {
+	margin: 0px;
+	padding: 0x;
+}
+
+/* стиль абзаца */
+
+p {
+	text-align:"justify";
+       margin: 0px;
+}
+
+
+/* меню */
+
+.menu {
+	padding: 0px;
+	height: 25px;
+}
+
+/* заголовок ниже меню ffcc99*/
+
+.name {
+	color: Black;
+	padding: 0px;
+	height: 30px;
+}
+
+/* средний столбец  ffe0be*/
+
+.content {
+	padding: 5px;
+	height: 15px;
+}
+
+
+/* левый столбец  3399ff  ffd4b9*/
+
+.left_banners {
+	color: Black;
+	padding: 0px;
+	height: 15px;
+}
+
+/* правый столбец*/
+.right_banners {
+	color: Black;
+	padding: 5px;
+	height: 15px;
+}
+
+/* верхняя полоска*/
+.header {
+	color: Black;
+	padding: 0px;
+	height: 20px;
+vertical-align: middle;
+font-size: 20px;
+font-weight: bold;
+}
+
+/* нижняя полоска*/
+.footer {
+	color: Black;
+	padding: 5px;
+	height: 15px;
+}
+
+/* обратная связь-вопрос*/
+.faq_cuestion 
+{
+align: justify;
+font-family: "Verdana"; 
+font-size:"16";
+
+}
+
+
+/* обратная связь-ответ*/
+.faq_respuesta 
+{
+align: justify;
+font-family: "Verdana"; 
+font-size:"16";
+
+}
+
+/* стиль разделительной линии */
+
+hr {
+/*       display: none;*/
+       color: #4474f5;
+}
+
+/* Фотогалерея вставить в стили */
+#gallery {
+   float: left;
+        width: 125px;  /*  длина рамки */
+        height: 105px;  /*  высота рамки */
+        padding: 3px;  /* отступ по высоте */
+        margin: 5px;  /* отступ сбоку */
+        border-style: solid;
+        border-width: 1px;
+        border-color: #AAAAAA;  /* цвет рамки */
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+   background:  #FFFFFF;   /* фоновый цвет */
+   text-align: center;
+}
+
+
+/* результат опроса вставить в стили */
+.vote_bg {
+ background-color: silver;
+}
+.vote_strip {
+ background-color: blue;
+ color: white;
+ font-size: 12px;
+ font-weight: bold;
+ text-align: center;
+}

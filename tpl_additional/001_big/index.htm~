@@ -1,0 +1,223 @@
+<html>
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+  <title>{{title}}</title>
+<link rel="stylesheet" type="text/css" href="{{template_big}}/style.css">
+<meta name="robots" content="noindex,nofollow" />
+</head>
+
+<body>
+
+<style>
+a {
+text-decoration:none;
+}
+a:hover,active {
+text-decoration:none;
+}
+* { font-size:15pt; }
+{{if_exists mode_font_size_small}}
+* { font-size:100%; }
+{{end if_exists mode_font_size_small}}
+{{if_exists mode_font_size_medium}}
+* { font-size:105%; }
+{{end if_exists mode_font_size_medium}}
+{{if_exists mode_font_size_large}}
+* { font-size:110%; }
+{{end if_exists mode_font_size_large}}
+{{if_exists mode_color_black}}
+* { color:black; background-color:white; }
+{{end if_exists mode_color_black}}
+{{if_exists mode_color_white}}
+* { color:white; background-color:black; }
+{{end if_exists mode_color_white}}
+div.big_menu,div.big_menu a { font-size:15pt; color:black; background-color:white; }
+</style>
+
+<div align="center" style="color:black; background-color:white; border-style:solid; border-color:black; border-width:1px; position:fixed; left:0px;top:0px; padding:5px; width:100%; height:30px;">
+
+<div class="big_menu" style="float:left;margin-left:50px;color:inherit;background-color:inherit;">Размер шрифта:</div>
+<div class="big_menu" style="float:left;margin-left:20px;color:inherit;background-color:inherit;" valign="baseline"><a href="./?font-size=small">A1</a></div>
+<div class="big_menu" style="float:left;margin-left:20px;color:inherit;background-color:inherit;" valign="baseline"><a href="./?font-size=medium">A2</a></div>
+<div class="big_menu" style="float:left;margin-left:20px;color:inherit;background-color:inherit;" valign="baseline"><a href="./?font-size=large">A3</a></div>
+
+<div class="big_menu" style="float:left;margin-left:50px;color:inherit;background-color:inherit;">Цвет сайта:</div>
+<div class="big_menu"><a style="float:left;margin-left:20px;color:black; background-color:white; border-style:solid; border-color:black; border-width:1px;" href="./?color=black">A</a></div>
+<div class="big_menu"><a style="float:left;margin-left:20px;color:white; background-color:black; border-style:solid; border-color:black; border-width:1px;" href="./?color=white">A</a></div>
+
+<div class="big_menu" style="float:left;margin-left:50px;color:inherit;background-color:inherit;"><a href="./?mode=desktop">Обычная версия</a></div>
+</div>
+
+<!--
+<style>
+a {
+text-decoration:underline;
+}
+a:hover,active {
+text-decoration:underline;
+}
+</style>
+-->
+<div style="padding-top:40px; width:100%;">
+
+ <!--верхняя строка-->
+{{if_exists header}}
+<h4>{{header}}</h4>
+{{end if_exists header}}
+
+<!--верхний баннер-->
+{{if_exists header_banner}}
+  <img src="{{header_banner}}" border="0" alt="" />
+{{end if_exists header_banner}}
+
+ <!--Основное поле-->
+<h1 class="name">{{name}}</h1>
+
+<table cellpadding="5">
+ <tr valign="top">
+<!--левая колонка-->
+  <!--<div class="left_banners" style="width:200px; float:left; padding:5px; margin-right:10px;">-->
+  <td width="300px">
+<!--меню-->
+<div>
+   <ul>
+
+{{categories}}<li><a href="{{category}}"><span>{{name}}</span></a></li>
+ {{if_exists subcategories}}
+  {{subcategories}}<li><a href="{{category}}"> - <span>{{name}}</span></a></li>{{end subcategories}}
+ {{end if_exists subcategories}}
+{{end categories}}
+{{if_exists reg}}
+<li><a href="admindb"><span>Вход</span></a></li>
+<li><a href="./?act=reg_form"><span>Регистрация</span></a></li>
+{{end if_exists reg}}
+{{if_exists nedv}}
+<li><a href="./?act=s_nedv_add"><span>Добавить объект</span></a></li>
+{{end if_exists nedv}}
+{{if_exists auto}}
+<li><a href="./?act=s_auto_add"><span>Добавить авто</span></a></li>
+{{end if_exists auto}}
+{{if_exists news}}
+<li><a href="./?act=s_add"><span>Добавить статью</span></a></li>
+<li><a href="./?act=archive"><span>Архив</span></a></li>
+{{end if_exists news}}
+{{if_exists links}}
+<li><a href="./?act=links"><span>Каталог сайтов</span></a></li>
+{{end if_exists links}}
+<li><a href="./?act=faq"><span>Вопросы и ответы</span></a></li>
+
+   </ul>
+</div>
+
+<!--меню магазина-->
+{{if_exists shop}}
+<div id="navcontainer">
+   <ul id="navlist">
+  {{if_exists shop_basket_num}}
+	<li><a  id="current" href="?show=shop_basket">Корзина (товаров {{shop_basket_num}} / {{shop_basket_amount}} руб.)</a></li>
+  {{end if_exists shop_basket_num}}
+
+  <li>Каталог товаров:</li>
+  {{shop_catalog}}
+
+  {{if_exists shop_price}}
+    <li><a href="{{shop_price}}" target="_blank">Скачать прайс</a></li>
+  {{end if_exists shop_price}}
+   </ul>
+</div>
+{{end if_exists shop}}
+
+<!--меню недвижимости-->
+{{if_exists nedv}}
+  <p class="menua1">
+  {{if_exists nedv_basket_num}}
+  	Выбрано: <font class="basket">{{nedv_basket_num}}</font><br>
+<!--	На сумму: <font class="basket">{{nedv_basket_amount}}</font> руб.<br>-->
+  {{end if_exists nedv_basket_num}}
+	<a href="?show=nedv_basket">Посмотреть</a>
+  </p>
+  <p class="menua1">Каталог недвижимости:</p>
+  {{nedv_catalog}}
+
+  {{if_exists nedv_price}}
+  <p class="menua1">
+    <a href="{{nedv_price}}" target="_blank">Скачать список</a>
+  </p>
+  {{end if_exists nedv_price}}
+{{end if_exists nedv}}
+
+<!--меню автосалона-->
+{{if_exists auto}}
+  <p class="menua1">
+  {{if_exists auto_basket_num}}
+  	Выбрано: <font class="basket">{{auto_basket_num}}</font><br>
+<!--	На сумму: <font class="basket">{{auto_basket_amount}}</font> руб.<br>-->
+  {{end if_exists auto_basket_num}}
+	<a href="?show=auto_basket">Посмотреть</a>
+  </p>
+  <p class="menua1">Каталог авто:</p>
+  {{auto_catalog}}
+
+  {{if_exists auto_price}}
+  <p class="menua1">
+    <a href="{{auto_price}}" target="_blank">Скачать список</a>
+  </p>
+  {{end if_exists auto_price}}
+{{end if_exists auto}}
+
+{{if_exists left_banners}}
+  {{left_banners}}
+{{end if_exists left_banners}}
+  <!--</div>-->
+  </td>
+
+  <td width="900px">
+  
+   {{content}}
+
+<br><br>
+<!--форма поиска-->
+<p class="search">
+ <form method=post action="?act=search">
+ <input type="text" name="pattern" size="20" value="{{pattern}}">
+ <input type="submit" value="Поиск">
+ </form>
+</p>
+{{if_exists reg}}
+<!--форма поиска домена-->
+<p>Адрес сайта (домен):
+ <form method=post action="?act=search_domain">
+ <input type="text" name="pattern_domain" size="20" value="{{pattern_domain}}">
+ <input type="submit" value="Проверить">
+ </form>
+</p>
+{{end if_exists reg}}
+  <!--</div>-->
+  </td>
+
+{{if_exists right_banners}}
+<!--правая колонка-->
+  <td width="300px">
+  <!--<div class="right_banners" style="width:200px; float:right; padding:5px; margin-left:10px;"> -->
+   {{right_banners}}
+  <!--</div>-->
+  </td>
+{{end if_exists right_banners}}
+
+  <!--<div class="content" style="width:90%; float:none; padding:5px; padding-left:200px; padding-right:200px;">-->
+ </tr>
+</table>
+</div>
+
+<!--нижняя строка-->
+{{if_exists footer}}
+  <div class="footer" style="width:100%; float:none;">
+<!--статистика посещений страницы-->
+Просмотров: всего - {{count_all}}, в среднем за сутки - {{count_day}}
+<br>
+{{footer}}<br>{{links_sign}}
+  </div>
+{{end if_exists footer}}
+
+</body>
+</html>

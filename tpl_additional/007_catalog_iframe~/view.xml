@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <type>template</type>
+  <user_id>1</user_id>
+  <title>Шаблон каталога сайтов для &lt;iframe&gt;</title>
+  <description>Без окантовочного оформления и своих стилей, только центральная часть страницы каталога сайтов. Шаблон используется для создания каталога сайтов, который отображается на сторонних ресурсах с промощью тега &lt;iframe&gt;</description>
+  <view_image></view_image>
+</body>

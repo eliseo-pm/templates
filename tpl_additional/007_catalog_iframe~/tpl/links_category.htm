@@ -1,0 +1,48 @@
+<div style="padding:10px;padding-top:0px;">
+
+<div ALIGN=LEFT>
+        {{if_exists image}}
+        <img src="{{image}}" />
+        {{end if_exists image}}
+
+<div style="padding:3px;background-color:#DDDDDD;">
+<a href="./?act=links">Каталог сайтов</a>:
+<!--<a href="?links_cat_id={{p_id}}">{{p_name}}</a>: -->
+{{if_exists p_id}}{{p_name}}: {{end if_exists p_id}}
+{{name}}
+</div><br>
+
+{{if_exists sites}}
+	{{if_exists pageslist}}Страницы: {{pageslist}}<br><br>{{end if_exists pageslist}}
+</div>
+	<table width="100%" cellpadding="5px">
+		{{sites}}
+		<tr>
+			<td valign=top style="vertical-align:top;">
+           <div style="margin-top:5px;">
+				{{if_exists banner}}
+					<a href="{{url}}" target=_blank><img src="{{banner}}" border=0 width=88px height=36px></a>
+				{{end if_exists banner}}
+				{{if_not_exists banner}}
+					<a href="{{url}}" target=_blank><img src="images/catalog.png" width="88" height="36"  border="0"></a>
+				{{end if_not_exists banner}}
+			  </div>
+			</td>
+         <td width="100%" align="left" valign="top" style="padding-left:10px;padding-bottom:10px;">
+		 		<div><a href="{{url}}" target=_blank>{{title}}</a></div>
+            <div style="font-size:85%">{{description}}</div>
+	      </td>
+		 </tr>
+		{{end sites}}
+	</table>
+ <div ALIGN=LEFT> 	<br>
+	{{if_exists listpages}}{{listpages}}<br><br>{{end if_exists listpages}}
+{{end if_exists sites}}
+
+{{if_not_exists sites}}
+	В этом разделе сайты не найдены.<br><br>
+{{end if_not_exists sites}}
+
+<a href="http://elmaykop.ru">Добавить сайт</a> 	 </div>
+
+</div>

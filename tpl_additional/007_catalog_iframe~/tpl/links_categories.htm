@@ -1,0 +1,69 @@
+<div style="padding:10px;padding-top:0px;">
+
+﻿﻿<table cellpadding=5 width=100%>
+        <tr>
+        {{categories(3,'</tr><tr>')}}
+        <td valign="top" align="left" width="30%">
+                <div style="width:95%;padding:3px;background-color:#DDDDDD;">
+        {{if_exists image}}
+        <img src="{{image}}" style="float:left; margin-right:5px;" />
+        {{end if_exists image}}
+                <!--<b><a href="?links_cat_id={{id}}">{{name}} ({{n_sites}})</a></b>-->
+                <b>{{name}}</b>
+                </div>
+                <div style="font-size:85%;margin:3px;padding:3px;">{{subcategories(1,', ')}}<a href="?links_cat_id={{id}}">{{name}}<!--
+({{n_sites}})--></a>{{end subcategories}}</div>
+        </td>
+        {{end categories}}
+</table><br>
+
+{{if_exists new_sites}}
+<div ALIGN=LEFT>
+<b>Новые сайты:</b>
+</div>
+
+<table width="100%" cellpadding="5px" style="margin-top:5px;">
+        {{new_sites}}
+        <tr>
+                <td valign=top style="vertical-align:top;">
+                  <div style="margin-top:5px;">
+                        {{if_exists banner}}
+                        <a href="{{url}}" target=_blank><img src="{{banner}}"
+border=0 width=88px height=36px></a>
+                        {{end if_exists banner}}
+                        {{if_not_exists banner}}
+                        <a href="{{url}}" target=_blank><img src="images/catalog.png"
+width="88" height="36" border="0"></a>
+                        {{end if_not_exists banner}}
+                  </div>
+                </td>
+                <td width="100%" align="left" valign="top" style="padding-left:10px;padding-bottom:10px;">
+                        <div><a href="{{url}}" target=_blank>{{title}}</a></div>
+                        <div style="font-size:85%">{{description}}</div>
+                </td>
+         </tr>
+        {{end new_sites}}
+</table>
+{{end if_exists new_sites}}
+
+<table width=180>
+  <tr>
+        <td>Сайтов в каталоге:</td><td>{{sites_total}}</td>
+  </tr>
+<!--  <tr>
+        <td>Сайтов отклонено:</td><td>{{sites_denied}}</td>
+  </tr>
+-->  <tr>
+        <td>Сайтов на модерации:</td><td>{{sites_moder}}</td>
+  </tr>
+</table>
+
+<!--{{if_not_exists new_sites}}
+Сайты в каталоге не найдены.
+{{end if_not_exists new_sites}}-->
+
+<div ALIGN=LEFT style="margin-top:5px;">
+<a href="http://elmaykop.ru" target=_blank>Добавить сайт</a>
+</div>
+
+</div>
