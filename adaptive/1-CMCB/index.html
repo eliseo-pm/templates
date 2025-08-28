@@ -781,9 +781,7 @@ end Color modes selector -->
 {{end if_not_exists video}}
 
 
-
-
-<div class="card elcontainer{{if_exists hslider}} mt-3{{end if_exists hslider}}{{if_exists vslider}} mt-3{{end if_exists vslider}}">
+<div class="card elcontainer{{if_exists main_page}}{{if_exists hslider}} mt-3{{end if_exists hslider}}{{if_exists vslider}} mt-3{{end if_exists vslider}}{{end if_exists main_page}}">
   <div class="card-header grandient" id="cardHeaderDiv">
 {{if_exists name}}
 <!-- *** заголовок страницы *** -->
@@ -1095,4 +1093,5 @@ CardBody.setAttribute('style', 'min-height: ' + (websiteHeight{{if_exists header
 }
 </script>
 </body>
+
 </html>
