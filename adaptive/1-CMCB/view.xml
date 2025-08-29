@@ -5,7 +5,8 @@
   <title>
     <ru>1-CMCB</ru>
     <en>1-CMCB</en>
-    <es>1-CMCB</es></title>
+    <es>1-CMCB</es>
+  </title>
   <description>
     <ru>Дизайн адаптивный для всех устройств, это может быть персональный сайт, интернет-магазин, автосалон, недвижимость, газета или онлайн-журнал.</ru>
     <en>Design adaptive to all devices, it can be a personal website, online store, car dealership, real estate, newspaper or online magazine.</en>
@@ -15,4 +16,5 @@
   <columns>1</columns>
   <color>Rojo-Azul</color>
 </body>
+
 
