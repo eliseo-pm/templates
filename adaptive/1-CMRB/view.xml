@@ -5,7 +5,8 @@
   <title>1-CMRB</title>
   <description>Diseño adaptivo a todos los dispositivos, puede ser un Sitio web personal, Tienda en linea, Concesionario de autos, Inmobiliaria, Periodico o Revista en linea</description>
   <view_image>1.jpg </view_image>
-  <columns>1-Columna</columns>
+  <columns>1</columns>
   <color>Rojo-Azul</color>
 </body>
+
 
