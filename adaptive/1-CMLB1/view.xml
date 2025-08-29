@@ -2,9 +2,24 @@
 <body>
   <type>template</type>
   <user_id>500</user_id>
-  <title>1-CMLB1</title>
-  <description>Diseño adaptivo a todos los dispositivos, puede ser un Sitio web personal, Solo para sitios web con numero máximo de 5 secciones</description>
+  <title>
+    <ru>1-CMLB1</ru>
+    <en>1-CMLB1</en>
+    <es>1-CMLB1</es>
+  </title>
+  <description>
+    <ru>
+      Адаптивный дизайн, может быть личным сайтом, только для сайтов с максимальным количеством 5 разделов.
+    </ru>
+    <en>
+      Adaptive design for all devices, can be a personal website, only for websites with a maximum of 5 sections.      
+    </en>
+    <es>
+      Diseño adaptivo a todos los dispositivos, puede ser un Sitio web personal, Solo para sitios web con numero máximo de 5 secciones
+    </es>
+  </description>
   <view_image>image4.jpg </view_image>
   <columns>1</columns>
   <color>Rojo-Azul</color>
 </body>
+
