@@ -3,7 +3,7 @@
   <type>template</type>
   <user_id>500</user_id>
   <title>
-  <ru>1-CMCB</ru>
+    <ru>1-CMCB</ru>
     <en>1-CMCB</en>
     <es>1-CMCB</es></title>
   <description>
@@ -15,3 +15,4 @@
   <columns>1</columns>
   <color>Rojo-Azul</color>
 </body>
+
