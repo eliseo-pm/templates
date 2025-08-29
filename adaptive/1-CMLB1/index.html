@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es" class="dark" data-bs-theme="dark" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8" />
+<title>{{title}}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{meta_description}}" />
+<meta name="keywords" content="{{meta_keywords}}" />
+<meta name="generator" content="Loro" />
+{{verification_tags}}
+<link rel="shortcut icon" href="/{{template}}/favicon.ico" />
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- <script src="/bootstrap/site/static/docs/5.3/assets/js/color-modes.js"></script> -->
+<link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="/bootstrap/icons-1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/elstrana.js"></script>
+<link href="{{css1.css}}" rel="stylesheet" />
+<link href="{{elstrana.css}}" rel="stylesheet" />
+<link href="{{bootstrap-theme-dark.css}}" rel="stylesheet" />
+<link href="{{bootstrap-theme-light.css}}" rel="stylesheet" />
+<style>
+.offcanvas-body {
+ /* overflow-x: auto; */
+height: 100%;
+}.offcanvas {
+ /*  overflow-x: auto;*/
+display: inline;
+}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+.slidechevron::before {
+	border-style: solid;
+	border-width: 0.55em 0.55em 0 0;
+	content: '';
+	display: inline-block;
+	height: 1.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 1.45em;
+}
+.navbar.navbar-expand-lg.navbar-dark.fixed-top.bg-dark {
+  padding-bottom: 4px;
+  padding-top: 0px;
+}
+.bi {
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      @media (max-width: 1129px) {
+.nav-item {
+  font-size: 20px;
+}
+      }
+            @media (max-width: 914px) {
+.nav-item {
+  font-size: 18px;
+}
+}
+{{if_exists video}}
+{{if_exists textOnVideo}}
+@media (min-width: 1061px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+        .landing-page-btn-container {
+                margin-top: 0px;
+        }
+}
+@media screen and (max-width: 991px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+        .landing-page-btn-container {
+                margin-top: 0px;
+        }
+}
+{{end if_exists textOnVideo}}
+
+{{if_not_exists textOnVideo}}
+@media (min-width: 1061px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+        .landing-page-btn-container {
+                margin-top: 80px;
+        }
+}
+@media screen and (max-width: 991px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+        .landing-page-btn-container {
+                margin-top: 80px;
+        }
+}
+{{end if_not_exists textOnVideo}}
+{{end if_exists video}}
+</style>
+</head>
+
+<body>
+
+{{if_exists main_page}}
+
+
+{{if_exists sound}}
+<audio src="{{sound_dir}}/{{sound}}" preload autoplay></audio>
+{{end if_exists sound}}
+
+{{if_exists video}}
+  <div class="dlp-wrapper">
+    <div class="dlp-content"></div>
+    <div id="homepage">
+      <div class="js-masthead home-masthead  masthead masthead--expandable home-masthead--simply-animated is-visible">
+
+        <div class="js-masthead-content masthead__content">
+          <div class="js-masthead-container masthead__container  landing-page-container" data-fader="" data-fader-enter="1" data-fader-leave="-1" style="will-change: opacity; opacity: 1;">
+            <div class="masthead__center">
+              <!--  <img class="home-masthead__tagline-img" src="prueba 2 _files/algo.png">  -->
+{{if_exists textOnVideo}}
+                <h4 class="masthead__title landing-page-title">{{textOnVideo}}</h4>
+{{end if_exists textOnVideo}}
+{{if_exists textOnButton}}
+                <div class="landing-page-btn-container">
+                  <a href="{{linkOnButton}}"><button id="sign-up-button__original" class="js-masthead-btn home-masthead__btn landing-page-btn landing-page-btn--white" data-track-category="signup_button" data-track-clicks="main" href="#">{{textOnButton}}</button></a>
+                </div>
+{{end if_exists textOnButton}}
+            </div>
+          </div>
+        </div><!-- .masthead__content -->
+        <div class="masthead__video-container">
+          <video id="video" class="video-css js-unveil js-masthead-video masthead__video" autoplay="autoplay" loop="" muted="muted" >
+                                            <source src="{{video_dir}}/{{video}}" type="video/mp4">
+                                        </video>
+        </div>
+      </div>
+      </div>
+      </div>
+<!-- fin video -->
+{{end if_exists video}}
+{{if_not_exists video}}
+
+{{if_exists header_banner}}
+<!-- Banner superior -->
+<div class="container-fluid" style="padding: 0px;">
+<div class="col-12" id="topBannerDiv">
+<img src="{{header_banner}}" class="img-responsive col-12" style="margin: 0 auto;" alt="{{site_title}}" />
+</div>
+</div>
+{{end if_exists header_banner}}
+{{end if_not_exists video}}
+{{end if_exists main_page}}
+
+{{if_not_exists main_page}}
+{{if_exists header_banner}}
+<!-- Banner superior -->
+<div class="container-fluid" style="padding: 0px;">
+<div class="col-12" id="topBannerDiv">
+<img src="{{header_banner}}" class="img-responsive col-12" style="margin: 0 auto;" alt="{{site_title}}" />
+</div>
+</div>
+{{end if_exists header_banner}}
+{{end if_not_exists main_page}}
+
+
+<div class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" aria-modal="true" role="dialog" style="width: 5.5rem;padding:0px;">
+  <div class="offcanvas-body p-0">
+<ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+
+
+{{categories}}
+{{if_not_exists subcategories}}
+ <li class="nav-item"><a class="nav-link border-bottom rounded-0 p-1 {{if_exists current}} active{{end if_exists current}}" href="{{category}}" style="max-width: 5.5rem" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" aria-label="{{name}}" data-bs-original-title="{{name}}">{{if_exists icon}}<i class="bi bi-{{icon}} fs-3"></i><br>{{end if_exists icon}}</a></li>
+{{end if_not_exists subcategories}}
+{{if_exists subcategories}}
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle border-bottom rounded-0 p-1" href="#" style="max-width: 5.5rem;text-align:center;" data-bs-toggle="dropdown">{{if_exists icon}}<i class="bi bi-{{icon}}  fs-3"></i> {{end if_exists icon}}<div></div><div style="font-size:60%;word-wrap:anywhere;width:100%;white-space: normal;">{{name}}</div><div></div></a>
+<ul class="dropdown-menu-right- dropdown-menu rounded-3" role="menu">
+  {{subcategories}}<li><a class="dropdown-item" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+  {{end subcategories}}
+      </ul>
+    </li>
+ {{end if_exists subcategories}}
+{{end categories}}
+{{if_exists info}}
+<li class="nav-item"><a class="nav-link border-bottom rounded-0 p-1" href="/?act=s_add" style="max-width: 5.5rem" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" aria-label="Añadir articulo" data-bs-original-title="Añadir articulo"><i class="bi bi-plus-circle fs-3"></i><br></a></li>
+{{end if_exists info}}
+{{if_exists reg}}
+<li class="nav-item"><a class="nav-link border-bottom rounded-0 p-1" href="///{{base_domain}}/cp/login.php" style="max-width: 5.5rem" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" aria-label="Iniciar secion" data-bs-original-title="Iniciar secion"><i class="bi bi-box-arrow-in-right fs-3"></i><br></a></li>
+<li class="nav-item"><a class="nav-link border-bottom rounded-0 p-1" href="///{{base_domain}}/?act=reg_form" style="max-width: 5.5rem" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" aria-label="Registro" data-bs-original-title="Registro"><i class="bi bi-person-plus fs-3"></i><br></a></li>
+{{end if_exists reg}}
+{{categories2}}
+<!-- Secciones del menu -->
+{{if_not_exists subcategories2}}
+ <li class="nav-item"><a class="nav-link border-bottom rounded-0 p-1 {{if_exists current2}} active{{end if_exists current2}}" href="{{category2}}" style="max-width: 5.5rem" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" aria-label="{{name2}}" data-bs-original-title="{{name2}}">{{if_exists icon2}}<i class="bi bi-{{icon2}} fs-3"></i><br>{{end if_exists icon2}}</a></li>
+{{end if_not_exists subcategories2}}
+
+{{if_exists subcategories2}}
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle border-bottom rounded-0 p-1" href="#" style="max-width: 5.5rem;text-align:center;" data-bs-toggle="dropdown">{{if_exists icon2}}<i class="bi bi-{{icon2}} fs-3"></i> {{end if_exists icon2}}<div></div><div style="font-size:60%;word-wrap:anywhere;width:100%;white-space: normal;">{{name2}}</div><div></div></a>
+<ul class="dropdown-menu-right- dropdown-menu rounded-3" role="menu">
+  {{subcategories2}}<li><a class="dropdown-item" href="{{category2}}">{{if_exists icon2}}<i class="bi bi-{{icon2}}"></i> {{end if_exists icon2}}{{name2}}</a></li>
+  {{end subcategories2}}
+      </ul>
+    </li>
+ {{end if_exists subcategories2}}
+{{end categories2}}
+ <li class="nav-item"><a class="nav-link border-bottom rounded-0 p-1" href="./?act=feed_add_form" style="max-width: 5.5rem" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" aria-label="Enviar mensaje" data-bs-original-title="Enviar mensaje"><i class="bi bi-envelope fs-3"></i><br></a></li>
+<li class="nav-item dropend">
+<a class="nav-link dropdown-toggle border-bottom rounded-0 p-1 dropdown-toggle1" href="#" style="max-width: 5.5rem;text-align:center;" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"><i class="bi bi-search"></i></a>
+  <form class="dropdown-menu p-4" style="width: 280px;" method="post" action="?act=search">
+<div class="input-group">
+      <input type="text" class="form-control search-bar" placeholder="Buscar..." style="display: inline-block;" name="pattern" aria-describedby="button-addon2" value="{{pattern}}">
+    <button type="submit" class="btn btn-outline-secondary" style="font-size: medium;" type="button" id="button-addon2" >OK</button>
+</div>
+  </form>
+ </li>
+<div class="row row-cols-2" style="position:absolute;bottom:0px;">
+<!-- Popular social links -->
+{{if_exists facebook}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{facebook}}">
+<i class="bi bi-facebook"></i>
+</a>
+</li>
+{{end if_exists facebook}}
+{{if_exists pinterest}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{pinterest}}">
+<i class="bi bi-pinterest"></i>
+</a>
+</li>
+{{end if_exists pinterest}}
+{{if_exists twitter}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{twitter}}">
+<i class="bi bi-twitter"></i>
+</a>
+</li>
+{{end if_exists twitter}}
+{{if_exists instagram}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{instagram}}">
+<i class="bi bi-instagram"></i>
+</a>
+</li>
+{{end if_exists instagram}}
+{{if_exists telegram}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{telegram}}">
+<i class="bi bi-telegram"></i>
+</a>
+</li>
+{{end if_exists telegram}}
+{{if_exists youtube}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{youtube}}">
+<i class="bi bi-youtube"></i>
+</a>
+</li>
+{{end if_exists youtube}}
+{{if_exists tiktok}}
+<li class="nav-item p-0">
+<a class="nav-link" style="font-size: 16pt;" href="{{tiktok}}">
+<i class="bi bi-tiktok"></i>
+</a>
+</li>
+{{end if_exists tiktok}}
+</div>
+</ul>
+</div>
+</div>
+
+<div class="FON">
+
+{{if_exists main_page}}
+{{if_exists announce}}
+<!-- Jumbotron container -->
+<div class="container-fluid elcontainer">
+    <div class="col-12">
+      <div class="jumbotron border border-dashed rounded-3">
+{{announce}}
+      </div>
+    </div>
+</div><!-- /Jumbotron container -->
+{{end if_exists announce}}
+{{end if_exists main_page}}
+
+
+
+
+<div class="container-fluid">
+<div class="row"> <!--  style="flex-direction:row-reverse;" -->
+
+
+
+
+
+<!-- Main content -->
+<div class="col-12" style="padding-right: 0px;padding-left: 0px;">
+
+
+{{if_exists video}}
+{{if_not_exists isMobile}}
+{{if_exists main_page}}
+{{if_exists carousel}}
+<!-- Slider BOOTSTRAP 5 -->
+<div id="carouselExampleAutoplaying" class="carousel slide elcontainer" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+{{carousel}}
+    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{{id}}" class="active" aria-current="true" style="background-color: #fff;"></button>
+{{end carousel}}
+  </div>
+<div class="carousel-inner">
+{{carousel}}
+    <div class="carousel-item{{if_exists active}} active{{end if_exists active}}">
+      <img src="{{src}}" class="d-block w-100" alt="{{alt}}">
+       <div class="carousel-caption d-none d-lg-block">
+{{if_exists title}}<h5>{{title}}</h5>{{end if_exists title}}
+{{if_exists description}}<p>{{description}}</p>{{end if_exists description}}
+{{if_exists url}}<p><a class="btn btn-lg btn-primary" href="{{url}}" role="button">Ver</a></p>{{end if_exists url}}
+        </div>
+    </div>
+{{end carousel}}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="slidechevron 1left1" aria-hidden="true" style="rotate: -90deg;"></span>
+    <span class="visually-hidden">Atras</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="slidechevron 1right1" aria-hidden="true" style="rotate: 85deg;"></span>
+    <span class="visually-hidden">Suiguiente</span>
+  </button>
+</div>
+{{end if_exists carousel}}
+{{end if_exists main_page}}
+{{end if_not_exists isMobile}}
+{{end if_exists video}}
+
+
+
+{{if_not_exists video}}
+{{if_exists main_page}}
+{{if_exists carousel}}
+<!-- Slider BOOTSTRAP -->
+<div id="carouselExampleAutoplaying" class="carousel slide elcontainer" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+{{carousel}}
+    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{{id}}" class="active" aria-current="true"  style="background-color: #fff;"></button>
+{{end carousel}}
+  </div>
+<div class="carousel-inner">
+{{carousel}}
+    <div class="carousel-item{{if_exists active}} active{{end if_exists active}}">
+      <img src="{{src}}" class="d-block w-100" alt="{{alt}}">
+       <div class="carousel-caption d-none d-lg-block">
+{{if_exists title}}<h5>{{title}}</h5>{{end if_exists title}}
+{{if_exists description}}<p>{{description}}</p>{{end if_exists description}}
+{{if_exists url}}<p><a class="btn btn-lg btn-primary" href="{{url}}" role="button">Ver</a></p>{{end if_exists url}}
+        </div>
+    </div>
+{{end carousel}}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="slidechevron 1left1" aria-hidden="true" style="rotate: -90deg;"></span>
+    <span class="visually-hidden">Suiguiente</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="slidechevron 1right1" aria-hidden="true" style="rotate: 85deg;"></span>
+    <span class="visually-hidden">Suiguiente</span>
+  </button>
+</div>
+{{end if_exists carousel}}
+{{end if_exists main_page}}
+{{end if_not_exists video}}
+
+
+
+
+<div class="card elcontainer">
+  <div class="card-header grandient" id="cardHeaderDiv">
+{{if_exists name}}
+<!-- *** заголовок страницы *** -->
+<h1>{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</h1>
+{{end if_exists name}}
+  </div>
+  <div class="card-body" id="CardBody">
+<!-- *** последние товары *** -->
+{{if_exists last_items}}<div>{{last_items}}</div>{{end if_exists last_items}}
+
+<!-- *** содержимое центральной части страницы *** -->
+
+{{content}}
+
+  </div>
+</div>
+
+
+
+
+
+
+{{if_exists video}}
+{{if_exists isMobile}}
+{{if_exists main_page}}
+{{if_exists carousel}}
+<!-- Slider BOOTSTRAP -->
+<div id="carouselExampleAutoplaying" class="carousel slide elcontainer" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+{{carousel}}
+    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{{id}}" class="active" aria-current="true" style="background-color: #fff;"></button>
+{{end carousel}}
+  </div>
+<div class="carousel-inner">
+{{carousel}}
+    <div class="carousel-item{{if_exists active}} active{{end if_exists active}}">
+      <img src="{{src}}" class="d-block w-100" alt="{{alt}}">
+       <div class="carousel-caption d-none d-lg-block">
+{{if_exists title}}<h5>{{title}}</h5>{{end if_exists title}}
+{{if_exists description}}<p>{{description}}</p>{{end if_exists description}}
+{{if_exists url}}<p><a class="btn btn-lg btn-primary" href="{{url}}" role="button">Ver</a></p>{{end if_exists url}}
+        </div>
+    </div>
+{{end carousel}}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="slidechevron 1left1" aria-hidden="true" style="rotate: -90deg;"></span>
+    <span class="visually-hidden">Suiguiente</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="slidechevron 1right1" aria-hidden="true" style="rotate: 85deg;"></span>
+    <span class="visually-hidden">Suiguiente</span>
+  </button>
+</div>
+{{end if_exists carousel}}
+{{end if_exists main_page}}
+{{end if_exists isMobile}}
+{{end if_exists video}}
+
+</div><!-- /Main content -->
+<!-- Sidebar -->
+<div class="col-12" style="margin-bottom: 20px;padding: 0px;">
+<div class="position-sticky" style="top: 60px">
+{{if_exists logo}}
+<!-- *** логотип *** -->
+<div class="elcontainer panel-left">
+<div style="text-align: center;"><a href="./" class="logo"><img src="{{logo}}"></a></div>
+</div>
+{{end if_exists logo}}
+{{if_exists left_content}}
+<!-- *** раздел Слева *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{left_name}}</h3>
+  </div>
+  <div class="card-body">
+    {{left_content}}
+  </div>
+</div>
+{{end if_exists left_content}}
+
+{{if_exists left_content2}}
+<!-- *** раздел Слева 2 *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{left_name2}}</h3>
+  </div>
+  <div class="card-body">
+    {{left_content2}}
+  </div>
+</div>
+{{end if_exists left_content2}}
+{{if_exists right_content}}
+<!-- *** раздел Справа *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{right_name}}</h3>
+  </div>
+  <div class="card-body">
+    {{right_content}}
+  </div>
+</div>
+{{end if_exists right_content}}
+
+{{if_exists right_content2}}
+<!-- *** раздел Справа 2 *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{right_name2}}</h3>
+  </div>
+  <div class="card-body">
+    {{right_content2}}
+  </div>
+</div>
+{{end if_exists right_content2}}
+{{if_exists phrase}}
+<!-- *** Фраза дня *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">Frase del dia</h3>
+  </div>
+  <div class="card-body">
+    {{phrase}}
+  </div>
+</div>
+{{end if_exists phrase}}
+</div><!-- /Sidebar -->
+
+</div><!-- /row -->
+
+</div><!-- /container -->
+
+</div><!-- /FON -->
+
+{{if_exists whatsapp}}
+<div id="wpp-fix" class="right shake">
+	<button id="wpp-link" class="wpp-form wpp-link">   <a class="text-white text-decoration" href="https://wa.me/{{whatsapp}}">
+<i class="bi bi-whatsapp" style="width: 22px;font-size: 30px;height: 22px;display: contents;"></i>
+</a>	</button>
+	</div>
+</div>
+{{end if_exists whatsapp}}
+<footer>
+<div class="container container d-flex flex-wrap justify-content-between align-items-center">
+<div class="col-md-4 d-flex align-items-center">
+<!-- статистика посещений страницы -->
+Visitas: {{count_all}}
+{{if_exists footer}}
+<!-- нижняя строка сайта -->
+© {{footer}}- {{year}} 
+{{end if_exists footer}}
+</div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+{{if_exists dribbble}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{dribbble}}"><i class="bi bi-dribbble"></i></a>
+</li>{{end if_exists dribbble}}
+{{if_exists skype}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{skype}}"><i class="bi bi-skype"></i></a>
+</li>{{end if_exists skype}}
+{{if_exists spotify}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{spotify}}"><i class="bi bi-spotify"></i></a>
+</li>{{end if_exists spotify}}
+{{if_exists linkedin}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{linkedin}}"><i class="bi bi-linkedin"></i></a>
+</li>{{end if_exists linkedin}}
+{{if_exists vimeo}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{vimeo}}"><i class="bi bi-vimeo"></i></a>
+</li>{{end if_exists vimeo}}
+{{if_exists reddit}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{reddit}}"><i class="bi bi-reddit"></i></a>
+</li>{{end if_exists reddit}}
+{{if_exists strava}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{strava}}"><i class="bi bi-strava"></i></a>
+</li>{{end if_exists strava}}
+{{if_exists stackoverflow}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{stackoverflow}}"><i class="bi bi-stack-overflow"></i></a>
+</li>{{end if_exists stackoverflow}}
+{{if_exists link-1}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-1}}">{{link-1_title}}</a>
+</li>{{end if_exists link-1}}
+{{if_exists link-2}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-2}}">{{link-2_title}}</a>
+</li>{{end if_exists link-2}}
+{{if_exists link-3}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-3}}">{{link-3_title}}</a>
+</li>{{end if_exists link-3}}
+{{if_exists link-4}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-4}}">{{link-4_title}}</a>
+</li>{{end if_exists link-4}}
+{{if_exists link-5}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-5}}">{{link-5_title}}</a>
+</li>{{end if_exists link-5}}
+{{if_exists link-6}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-6}}">{{link-6_title}}</a>
+</li>{{end if_exists link-6}}
+{{if_exists link-7}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-7}}">{{link-7_title}}</a>
+</li>{{end if_exists link-7}}
+{{if_exists link-8}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-8}}">{{link-8_title}}</a>
+</li>{{end if_exists link-8}}
+{{if_exists link-9}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-9}}">{{link-9_title}}</a>
+</li>{{end if_exists link-9}}
+{{if_exists link-10}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-10}}">{{link-10_title}}</a>
+</li>{{end if_exists link-10}}
+{{if_exists link-11}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-11}}">{{link-11_title}}</a>
+</li>{{end if_exists link-11}}
+{{if_exists link-12}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-12}}">{{link-12_title}}</a>
+</li>{{end if_exists link-12}}
+{{if_exists link-a}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-a}}">{{link-a_title}}</a>
+</li>{{end if_exists link-a}}
+{{if_exists link-b}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-b}}">{{link-b_title}}</a>
+</li>{{end if_exists link-b}}
+</ul>
+</div>
+</footer>
+
+
+</div>
+</div>
+<script>
+let websiteHeight = window.innerHeight;
+let websiteWidth = window.innerWidth;
+{{if_exists main_page}}{{if_exists carousel}}let carouselHeight = document.getElementById("carouselExampleAutoplaying").offsetHeight;{{end if_exists carousel}}{{end if_exists main_page}}
+let cardHeaderHeight = document.getElementById("cardHeaderDiv").offsetHeight;
+{{if_exists header_banner}}let bannerHeight = document.getElementById("topBannerDiv").offsetHeight;{{end if_exists header_banner}}
+let CardBody = document.getElementById('CardBody');
+if (websiteWidth > 991) {
+CardBody.setAttribute('style', 'min-height: ' + (websiteHeight{{if_exists header_banner}} - bannerHeight{{end if_exists header_banner}} - cardHeaderHeight{{if_exists main_page}}{{if_exists carousel}} - carouselHeight{{end if_exists carousel}}{{end if_exists main_page}} - 10) + 'px');
+}
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+</body>
+</html>
