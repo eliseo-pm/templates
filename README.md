@@ -56,6 +56,40 @@ All templates use the `{{variable}}` syntax for fast and flexible customization.
 
 ---
 
+## 🗂️ Design Naming Convention
+
+All template designs in this repository follow a specific encoding system to describe their layout and configuration. The naming convention is as follows:
+
+`Columns | Menu | Framework | Standard | Color`
+
+Where each segment represents:
+
+- **Columns (\*)**: The number of columns in the layout (1, 2, or 3).  
+- **Menu (\*)**: Position of the menu.  
+  - `R` = Right  
+  - `L` = Left  
+- **Framework (\*)**: The first letter of the framework used (A-Z).  
+- **Standard (\*)**:  
+  - `S` = Standard  
+  - `N` = Non Standard  
+  - `C` = Compact  
+- **Color (\*)**: Any number between 0 and 20 to represent the color scheme.
+
+**Example:**  
+`3-CMRBS1`  
+Breakdown:  
+- `3` = 3 columns  
+- `C` = Columns 
+- `M` = Menu is:
+- `R` = Right  
+- `B` = Framework starting with "B" (Bootstrap)  
+- `S` = Standard  
+- `1` = Color scheme 1
+
+This system allows for quick identification of each template's structure and style at a glance.
+
+---
+
 ## ⚡ Automating Variable Replacement
 
 You can automate the replacement of `{{variable}}` placeholders using a script.  
