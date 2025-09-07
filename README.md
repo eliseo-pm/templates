@@ -57,7 +57,9 @@ All templates use the `{{variable}}` syntax for fast and flexible customization.
 
 ---
 
-## 🗂️ Design Naming Convention
+<a id="design-naming-convention"></a>
+
+## Design Naming Convention
 
 All template designs in this repository follow a specific encoding system to describe their layout and configuration. The naming convention is as follows:
 
