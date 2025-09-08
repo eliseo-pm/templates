@@ -7,7 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="{{meta_description}}" />
 <meta name="keywords" content="{{meta_keywords}}" />
-<meta name="generator" content="Loro" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{domain}}">
+<meta property="og:site_name" content="{{title}}">
+<meta property="og:image" itemprop="image primaryImageOfPage" content="/{{template}}/images/ogImage.jpg">
+<meta name="generator" content="Creación de sitios web Loro" />
 {{verification_tags}}
 <link rel="shortcut icon" href="/{{template}}/favicon.ico" />
 <!--[if lt IE 9]>
@@ -30,38 +34,36 @@ height: 100%;
  /*  overflow-x: auto;*/
 display: inline;
 }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+  z-index: 1500;
+}
 .slidechevron::before {
 	border-style: solid;
 	border-width: 0.55em 0.55em 0 0;
@@ -80,31 +82,30 @@ display: inline;
   padding-top: 0px;
 }
 .bi {
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      @media (max-width: 1129px) {
+  fill: currentColor;
+}
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 1129px) {
 .nav-item {
   font-size: 20px;
 }
-      }
-            @media (max-width: 914px) {
+}
+@media (max-width: 914px) {
 .nav-item {
   font-size: 18px;
 }
@@ -115,46 +116,42 @@ display: inline;
 	.masthead__center {
 		margin-top: 80px;
 	}
-        .landing-page-btn-container {
-                margin-top: 0px;
-        }
+  .landing-page-btn-container {
+    margin-top: 0px;
+  }
 }
 @media screen and (max-width: 991px) {
 	.masthead__center {
 		margin-top: 80px;
 	}
-        .landing-page-btn-container {
-                margin-top: 0px;
-        }
+  .landing-page-btn-container {
+    margin-top: 0px;
+  }
 }
 {{end if_exists textOnVideo}}
-
 {{if_not_exists textOnVideo}}
 @media (min-width: 1061px) {
 	.masthead__center {
 		margin-top: 80px;
 	}
-        .landing-page-btn-container {
-                margin-top: 80px;
-        }
+  .landing-page-btn-container {
+    margin-top: 80px;
+  }
 }
 @media screen and (max-width: 991px) {
 	.masthead__center {
 		margin-top: 80px;
 	}
-        .landing-page-btn-container {
-                margin-top: 80px;
-        }
+  .landing-page-btn-container {
+    margin-top: 80px;
+  }
 }
 {{end if_not_exists textOnVideo}}
 {{end if_exists video}}
 </style>
 </head>
-
 <body>
-
 {{if_exists main_page}}
-
 
 {{if_exists sound}}
 <audio src="{{sound_dir}}/{{sound}}" preload autoplay></audio>
@@ -215,11 +212,9 @@ display: inline;
 {{end if_exists header_banner}}
 {{end if_not_exists main_page}}
 
-
 <div class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" aria-modal="true" role="dialog" style="width: 5.5rem;padding:0px;">
   <div class="offcanvas-body p-0">
 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-
 
 {{categories}}
 {{if_not_exists subcategories}}
@@ -339,153 +334,78 @@ display: inline;
 {{end if_exists announce}}
 {{end if_exists main_page}}
 
-
-
-
 <div class="container-fluid">
 <div class="row"> <!--  style="flex-direction:row-reverse;" -->
 
-
-
-
-
 <!-- Main content -->
 <div class="col-12" style="padding-right: 0px;padding-left: 0px;">
-
 
 {{if_exists video}}
 {{if_not_exists isMobile}}
 {{if_exists main_page}}
 {{if_exists carousel}}
-<!-- Slider BOOTSTRAP 5 -->
-<div id="carouselExampleAutoplaying" class="carousel slide elcontainer" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-{{carousel}}
-    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{{id}}" class="active" aria-current="true" style="background-color: #fff;"></button>
-{{end carousel}}
-  </div>
-<div class="carousel-inner">
-{{carousel}}
-    <div class="carousel-item{{if_exists active}} active{{end if_exists active}}">
-      <img src="{{src}}" class="d-block w-100" alt="{{alt}}">
-       <div class="carousel-caption d-none d-lg-block">
-{{if_exists title}}<h5>{{title}}</h5>{{end if_exists title}}
-{{if_exists description}}<p>{{description}}</p>{{end if_exists description}}
-{{if_exists url}}<p><a class="btn btn-lg btn-primary" href="{{url}}" role="button">Ver</a></p>{{end if_exists url}}
-        </div>
-    </div>
-{{end carousel}}
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="slidechevron 1left1" aria-hidden="true" style="rotate: -90deg;"></span>
-    <span class="visually-hidden">Atras</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="slidechevron 1right1" aria-hidden="true" style="rotate: 85deg;"></span>
-    <span class="visually-hidden">Suiguiente</span>
-  </button>
-</div>
+{{bslider}}
 {{end if_exists carousel}}
+{{if_exists hslider}}
+<div style="height: 430px;">
+{{hslidertpl}}
+</div>
+{{end if_exists hslider}}
+{{if_exists vslider}}
+{{vslidertpl}}
+{{end if_exists vslider}}
 {{end if_exists main_page}}
 {{end if_not_exists isMobile}}
 {{end if_exists video}}
 
-
-
 {{if_not_exists video}}
 {{if_exists main_page}}
 {{if_exists carousel}}
-<!-- Slider BOOTSTRAP -->
-<div id="carouselExampleAutoplaying" class="carousel slide elcontainer" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-{{carousel}}
-    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{{id}}" class="active" aria-current="true"  style="background-color: #fff;"></button>
-{{end carousel}}
-  </div>
-<div class="carousel-inner">
-{{carousel}}
-    <div class="carousel-item{{if_exists active}} active{{end if_exists active}}">
-      <img src="{{src}}" class="d-block w-100" alt="{{alt}}">
-       <div class="carousel-caption d-none d-lg-block">
-{{if_exists title}}<h5>{{title}}</h5>{{end if_exists title}}
-{{if_exists description}}<p>{{description}}</p>{{end if_exists description}}
-{{if_exists url}}<p><a class="btn btn-lg btn-primary" href="{{url}}" role="button">Ver</a></p>{{end if_exists url}}
-        </div>
-    </div>
-{{end carousel}}
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="slidechevron 1left1" aria-hidden="true" style="rotate: -90deg;"></span>
-    <span class="visually-hidden">Suiguiente</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="slidechevron 1right1" aria-hidden="true" style="rotate: 85deg;"></span>
-    <span class="visually-hidden">Suiguiente</span>
-  </button>
-</div>
+{{bslider}}
 {{end if_exists carousel}}
+{{if_exists hslider}}
+<div style="height: 430px;">
+{{hslidertpl}}
+</div>
+{{end if_exists hslider}}
+{{if_exists vslider}}
+{{vslidertpl}}
+{{end if_exists vslider}}
 {{end if_exists main_page}}
 {{end if_not_exists video}}
 
-
-
-
-<div class="card elcontainer">
+<div class="card elcontainer{{if_exists main_page}}{{if_exists hslider}} mt-3{{end if_exists hslider}}{{if_exists vslider}} mt-3{{end if_exists vslider}}{{end if_exists main_page}}">
   <div class="card-header grandient" id="cardHeaderDiv">
 {{if_exists name}}
-<!-- *** заголовок страницы *** -->
+<!-- *** Page title *** -->
 <h1>{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</h1>
 {{end if_exists name}}
   </div>
   <div class="card-body" id="CardBody">
-<!-- *** последние товары *** -->
+<!-- *** Last items*** -->
 {{if_exists last_items}}<div>{{last_items}}</div>{{end if_exists last_items}}
 
-<!-- *** содержимое центральной части страницы *** -->
+<!-- *** Page Content *** -->
 
 {{content}}
 
   </div>
 </div>
 
-
-
-
-
-
 {{if_exists video}}
 {{if_exists isMobile}}
 {{if_exists main_page}}
 {{if_exists carousel}}
-<!-- Slider BOOTSTRAP -->
-<div id="carouselExampleAutoplaying" class="carousel slide elcontainer" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-{{carousel}}
-    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{{id}}" class="active" aria-current="true" style="background-color: #fff;"></button>
-{{end carousel}}
-  </div>
-<div class="carousel-inner">
-{{carousel}}
-    <div class="carousel-item{{if_exists active}} active{{end if_exists active}}">
-      <img src="{{src}}" class="d-block w-100" alt="{{alt}}">
-       <div class="carousel-caption d-none d-lg-block">
-{{if_exists title}}<h5>{{title}}</h5>{{end if_exists title}}
-{{if_exists description}}<p>{{description}}</p>{{end if_exists description}}
-{{if_exists url}}<p><a class="btn btn-lg btn-primary" href="{{url}}" role="button">Ver</a></p>{{end if_exists url}}
-        </div>
-    </div>
-{{end carousel}}
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="slidechevron 1left1" aria-hidden="true" style="rotate: -90deg;"></span>
-    <span class="visually-hidden">Suiguiente</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="slidechevron 1right1" aria-hidden="true" style="rotate: 85deg;"></span>
-    <span class="visually-hidden">Suiguiente</span>
-  </button>
-</div>
+{{bslider}}
 {{end if_exists carousel}}
+{{if_exists hslider}}
+<div style="height: 430px;">
+{{hslidertpl}}
+</div>
+{{end if_exists hslider}}
+{{if_exists vslider}}
+{{vslidertpl}}
+{{end if_exists vslider}}
 {{end if_exists main_page}}
 {{end if_exists isMobile}}
 {{end if_exists video}}
@@ -495,13 +415,13 @@ display: inline;
 <div class="col-12" style="margin-bottom: 20px;padding: 0px;">
 <div class="position-sticky" style="top: 60px">
 {{if_exists logo}}
-<!-- *** логотип *** -->
+<!-- *** Logo *** -->
 <div class="elcontainer panel-left">
 <div style="text-align: center;"><a href="./" class="logo"><img src="{{logo}}"></a></div>
 </div>
 {{end if_exists logo}}
 {{if_exists left_content}}
-<!-- *** раздел Слева *** -->
+<!-- *** Left Section *** -->
 <div class="card elcontainer">
   <div class="card-header grandient">
     <h3 class="panel-title">{{left_name}}</h3>
@@ -513,7 +433,7 @@ display: inline;
 {{end if_exists left_content}}
 
 {{if_exists left_content2}}
-<!-- *** раздел Слева 2 *** -->
+<!-- *** Left Section 2 *** -->
 <div class="card elcontainer">
   <div class="card-header grandient">
     <h3 class="panel-title">{{left_name2}}</h3>
@@ -524,7 +444,7 @@ display: inline;
 </div>
 {{end if_exists left_content2}}
 {{if_exists right_content}}
-<!-- *** раздел Справа *** -->
+<!-- *** Right Section *** -->
 <div class="card elcontainer">
   <div class="card-header grandient">
     <h3 class="panel-title">{{right_name}}</h3>
@@ -536,7 +456,7 @@ display: inline;
 {{end if_exists right_content}}
 
 {{if_exists right_content2}}
-<!-- *** раздел Справа 2 *** -->
+<!-- *** Right Section 2 *** -->
 <div class="card elcontainer">
   <div class="card-header grandient">
     <h3 class="panel-title">{{right_name2}}</h3>
@@ -547,7 +467,7 @@ display: inline;
 </div>
 {{end if_exists right_content2}}
 {{if_exists phrase}}
-<!-- *** Фраза дня *** -->
+<!-- *** Phrase of the day *** -->
 <div class="card elcontainer">
   <div class="card-header grandient">
     <h3 class="panel-title">Frase del dia</h3>
@@ -576,10 +496,10 @@ display: inline;
 <footer>
 <div class="container container d-flex flex-wrap justify-content-between align-items-center">
 <div class="col-md-4 d-flex align-items-center">
-<!-- статистика посещений страницы -->
+<!-- Views counts -->
 Visitas: {{count_all}}
 {{if_exists footer}}
-<!-- нижняя строка сайта -->
+<!-- Footer -->
 © {{footer}}- {{year}} 
 {{end if_exists footer}}
 </div>
@@ -654,7 +574,6 @@ Visitas: {{count_all}}
 </div>
 </footer>
 
-
 </div>
 </div>
 <script>
@@ -670,6 +589,5 @@ CardBody.setAttribute('style', 'min-height: ' + (websiteHeight{{if_exists header
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
-
 </body>
 </html>
