@@ -28,7 +28,7 @@ All templates use the `{{variable}}` syntax for fast and flexible customization.
 - [Overview](#-overview)
 - [Features](#-features)
 - [Getting Started](#-getting-started)
-- [Design Naming Convention](#-design-naming-convention)
+- [Design Naming Convention](#design-naming-convention)
 - [Automating Variable Replacement](#-automating-variable-replacement)
 - [Available Templates](#-available-templates)
 - [Contributing](#-contributing)
