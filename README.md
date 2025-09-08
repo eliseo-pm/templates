@@ -75,7 +75,8 @@ Where each segment represents:
 - **Standard (\*)**:  
   - `S` = Standard  
   - `N` = Non Standard  
-  - `C` = Compact  
+  - `C` = Compact
+  - (Can be conmbined like `NC` (Non Standart and Compact))
 - **Color (\*)**: Any number between 0 and 20 to represent the color scheme.
 
 **Example:**  
