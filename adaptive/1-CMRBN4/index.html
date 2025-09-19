@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="es" class="light" data-bs-theme="light" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8" />
+<title>{{title}}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{meta_description}}" />
+<meta name="keywords" content="{{meta_keywords}}" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{domain}}">
+<meta property="og:site_name" content="{{title}}">
+<meta property="og:image" itemprop="image primaryImageOfPage" content="/{{template}}/images/ogImage.jpg">
+<meta name="generator" content="Creación de sitios web Loro" />
+{{verification_tags}}
+<link rel="shortcut icon" href="/{{template}}/favicon.ico" />
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- <script src="/bootstrap/site/static/docs/5.3/assets/js/color-modes.js"></script> -->
+<link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="/bootstrap/icons-1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/elstrana.js"></script>
+<link href="{{css1.css}}" rel="stylesheet" />
+<link href="{{elstrana.css}}" rel="stylesheet" />
+<link href="{{bootstrap-theme-dark.css}}" rel="stylesheet" />
+<link href="{{bootstrap-theme-light.css}}" rel="stylesheet" />
+<style>
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+  z-index: 1500;
+}
+.slidechevron::before {
+	border-style: solid;
+	border-width: 0.55em 0.55em 0 0;
+	content: '';
+	display: inline-block;
+	height: 1.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 1.45em;
+}
+.navbar.navbar-expand-lg.navbar-dark.fixed-top.bg-dark {
+  padding-bottom: 4px;
+  padding-top: 0px;
+}
+.bi {
+  fill: currentColor;
+}
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 1129px) {
+.nav-item {
+  font-size: 20px;
+}
+}
+@media (max-width: 914px) {
+.nav-item {
+  font-size: 18px;
+}
+}
+{{if_exists video}}
+{{if_exists textOnVideo}}
+@media (min-width: 1061px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+  .landing-page-btn-container {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 991px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+  .landing-page-btn-container {
+    margin-top: 0px;
+  }
+}
+{{end if_exists textOnVideo}}
+{{if_not_exists textOnVideo}}
+@media (min-width: 1061px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+  .landing-page-btn-container {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 991px) {
+	.masthead__center {
+		margin-top: 80px;
+	}
+  .landing-page-btn-container {
+    margin-top: 80px;
+  }
+}
+{{end if_not_exists textOnVideo}}
+{{end if_exists video}}
+</style>
+</head>
+
+<body>
+
+{{if_exists main_page}}
+
+{{if_exists sound}}
+<audio src="{{sound_dir}}/{{sound}}" preload autoplay></audio>
+{{end if_exists sound}}
+
+{{if_exists video}}
+  <div class="dlp-wrapper">
+    <div class="dlp-content"></div>
+    <div id="homepage">
+      <div class="js-masthead home-masthead  masthead masthead--expandable home-masthead--simply-animated is-visible">
+
+        <div class="js-masthead-content masthead__content">
+          <div class="js-masthead-container masthead__container  landing-page-container" data-fader="" data-fader-enter="1" data-fader-leave="-1" style="will-change: opacity; opacity: 1;">
+            <div class="masthead__center">
+              <!--  <img class="home-masthead__tagline-img" src="prueba 2 _files/algo.png">  -->
+{{if_exists textOnVideo}}
+                <h4 class="masthead__title landing-page-title">{{textOnVideo}}</h4>
+{{end if_exists textOnVideo}}
+{{if_exists textOnButton}}
+                <div class="landing-page-btn-container">
+                  <a href="{{linkOnButton}}"><button id="sign-up-button__original" class="js-masthead-btn home-masthead__btn landing-page-btn landing-page-btn--white" data-track-category="signup_button" data-track-clicks="main" href="#">{{textOnButton}}</button></a>
+                </div>
+{{end if_exists textOnButton}}
+            </div>
+          </div>
+        </div><!-- .masthead__content -->
+        <div class="masthead__video-container">
+          <video id="video" class="video-css js-unveil js-masthead-video masthead__video" autoplay="autoplay" loop="" muted="muted" >
+                                            <source src="{{video_dir}}/{{video}}" type="video/mp4">
+                                        </video>
+        </div>
+      </div>
+      </div>
+      </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark grandient" id="navDiv"> <!-- menu superior SIN video --->
+<div class="container-fluid">
+<a class="navbar-brand" href="/">{{header}}</a> <!-- Linea superior -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> <!-- boton del menu en la vercion movil -->
+    </button>
+<!-- Menu superior -->
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!-- Secciones del menu superior -->
+{{categories}}
+{{if_not_exists subcategories}}
+ <li class="nav-item"><a class="nav-link{{if_exists current}} active{{end if_exists current}}" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+{{end if_not_exists subcategories}}
+{{if_exists subcategories}}
+ <li class="nav-item dropdown"> <!-- {{if_exists current}} active{{end if_exists current}}" -->
+  <a href="{{category}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a>
+<ul class="dropdown-menu bg-dark rounded-3" role="menu">
+  {{subcategories}}<li><a class="dropdown-item" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+  {{end subcategories}}
+  </ul>
+ </li>
+ {{end if_exists subcategories}}
+{{end categories}}
+{{if_exists shop}}
+  {{shop_catalog}}
+  {{if_exists shop_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{shop_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de precios</a></li>
+  {{end if_exists shop_price}}
+{{end if_exists shop}}
+{{if_exists nedv}}
+  {{nedv_catalog}}
+  {{if_exists nedv_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{nedv_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de inmobiliaria</a></li>
+  {{end if_exists nedv_price}}
+{{end if_exists nedv}}
+{{if_exists auto}}
+  {{auto_catalog}}
+  {{if_exists auto_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{auto_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de autos</a></li>
+  {{end if_exists auto_price}}
+{{end if_exists auto}}
+</ul>
+<ul class="navbar-nav">
+{{if_exists facebook}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{facebook}}">
+<i class="bi bi-facebook"></i>
+</a>
+</li>
+{{end if_exists facebook}}
+{{if_exists pinterest}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{pinterest}}">
+<i class="bi bi-pinterest"></i>
+</a>
+</li>
+{{end if_exists pinterest}}
+{{if_exists twitter}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{twitter}}">
+<i class="bi bi-twitter"></i>
+</a>
+</li>
+{{end if_exists twitter}}
+{{if_exists instagram}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{instagram}}">
+<i class="bi bi-instagram"></i>
+</a>
+</li>
+{{end if_exists instagram}}
+{{if_exists telegram}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{telegram}}">
+<i class="bi bi-telegram"></i>
+</a>
+</li>
+{{end if_exists telegram}}
+{{if_exists youtube}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{youtube}}">
+<i class="bi bi-youtube"></i>
+</a>
+</li>
+{{end if_exists youtube}}
+{{if_exists tiktok}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{tiktok}}">
+<i class="bi bi-tiktok"></i>
+</a>
+</li>
+{{end if_exists tiktok}}
+<!-- Color modes selector
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown me-2 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Claro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Oscuro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+ end Color modes selector -->
+</ul>
+  <form method="post" action="?act=search">
+<div class="input-group">
+      <input type="text" class="form-control search-bar" placeholder="Buscar..." style="display: inline-block;" name="pattern" aria-describedby="button-addon2" value="{{pattern}}">
+    <button type="submit" class="btn btn-outline-secondary" style="font-size: medium;" type="button" id="button-addon2" >OK</button>
+</div>
+  </form>
+<ul class="nav navbar-nav navbar-right">
+{{if_exists shop}}
+<!-- Modulo de tienda en linea -->
+{{if_not_exists shop_basket_num}}
+   <li class="nav-item"><a class="nav-link" href="?show=shop_basket" title="Carrito de compras"><i class="bi bi-cart"></i>/*{{shop_basket_num}} / {{shop_basket_amount}} usd.*/</a></li>
+{{end if_not_exists shop_basket_num}}
+{{if_exists shop_basket_num}}
+  <li class="nav-item"><a class="nav-link"  href="?show=shop_basket" title="Carrito de compras ({{shop_basket_num}})" style="color:#F5F5F5;"><i class="bi bi-cart"></i> ({{shop_basket_num}})</a></li>
+{{end if_exists shop_basket_num}}
+{{end if_exists shop}}
+</ul>
+        </div>
+</div>
+</nav>
+{{end if_exists video}}
+
+<!-- fin video -->
+
+{{if_not_exists video}}
+
+{{if_exists header_banner}}
+<!-- Banner superior -->
+<div class="container-fluid" style="padding: 0px;">
+<div class="col-12" id="topBannerDiv">
+<img src="{{header_banner}}" class="img-responsive col-12" style="margin: 0 auto;" alt="{{site_title}}" />
+</div>
+</div>
+{{end if_exists header_banner}}
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark grandient"  id="navDiv"> <!-- menu superior SIN video --->
+<div class="container-fluid">
+<a class="navbar-brand" href="/">{{header}}</a> <!-- Linea superior -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> <!-- boton del menu en la vercion movil -->
+    </button>
+<!-- Menu superior -->
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!-- Secciones del menu superior -->
+{{categories}}
+{{if_not_exists subcategories}}
+ <li class="nav-item"><a class="nav-link{{if_exists current}} active{{end if_exists current}}" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+{{end if_not_exists subcategories}}
+{{if_exists subcategories}}
+ <li class="nav-item dropdown"> <!-- {{if_exists current}} active{{end if_exists current}}" -->
+  <a href="{{category}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a>
+<ul class="dropdown-menu bg-dark rounded-3" role="menu">
+  {{subcategories}}<li><a class="dropdown-item" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+  {{end subcategories}}
+  </ul>
+ </li>
+ {{end if_exists subcategories}}
+{{end categories}}
+{{if_exists shop}}
+  {{shop_catalog}}
+  {{if_exists shop_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{shop_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de precios</a></li>
+  {{end if_exists shop_price}}
+{{end if_exists shop}}
+{{if_exists nedv}}
+  {{nedv_catalog}}
+  {{if_exists nedv_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{nedv_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de inmobiliaria</a></li>
+  {{end if_exists nedv_price}}
+{{end if_exists nedv}}
+{{if_exists auto}}
+  {{auto_catalog}}
+  {{if_exists auto_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{auto_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de autos</a></li>
+  {{end if_exists auto_price}}
+{{end if_exists auto}}
+</ul>
+<ul class="navbar-nav">
+{{if_exists facebook}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{facebook}}">
+<i class="bi bi-facebook"></i>
+</a>
+</li>
+{{end if_exists facebook}}
+{{if_exists pinterest}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{pinterest}}">
+<i class="bi bi-pinterest"></i>
+</a>
+</li>
+{{end if_exists pinterest}}
+{{if_exists twitter}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{twitter}}">
+<i class="bi bi-twitter"></i>
+</a>
+</li>
+{{end if_exists twitter}}
+{{if_exists instagram}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{instagram}}">
+<i class="bi bi-instagram"></i>
+</a>
+</li>
+{{end if_exists instagram}}
+{{if_exists telegram}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{telegram}}">
+<i class="bi bi-telegram"></i>
+</a>
+</li>
+{{end if_exists telegram}}
+{{if_exists youtube}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{youtube}}">
+<i class="bi bi-youtube"></i>
+</a>
+</li>
+{{end if_exists youtube}}
+{{if_exists tiktok}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{tiktok}}">
+<i class="bi bi-tiktok"></i>
+</a>
+</li>
+{{end if_exists tiktok}}
+<!-- Color modes selector 
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown me-2 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Claro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Oscuro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+end Color modes selector -->
+</ul>
+  <form method="post" action="?act=search">
+<div class="input-group">
+      <input type="text" class="form-control search-bar" placeholder="Buscar..." style="display: inline-block;" name="pattern" aria-describedby="button-addon2" value="{{pattern}}">
+    <button type="submit" class="btn btn-outline-secondary" style="font-size: medium;" type="button" id="button-addon2" >OK</button>
+</div>
+  </form>
+<ul class="nav navbar-nav navbar-right">
+{{if_exists shop}}
+<!-- Modulo de tienda en linea -->
+{{if_not_exists shop_basket_num}}
+   <li class="nav-item"><a class="nav-link" href="?show=shop_basket" title="Carrito de compras"><i class="bi bi-cart"></i>/*{{shop_basket_num}} / {{shop_basket_amount}} usd.*/</a></li>
+{{end if_not_exists shop_basket_num}}
+{{if_exists shop_basket_num}}
+  <li class="nav-item"><a class="nav-link"  href="?show=shop_basket" title="Carrito de compras ({{shop_basket_num}})" style="color:#F5F5F5;"><i class="bi bi-cart"></i> ({{shop_basket_num}})</a></li>
+{{end if_exists shop_basket_num}}
+{{end if_exists shop}}
+</ul>
+        </div>
+</div>
+</nav>
+
+
+
+
+
+
+{{end if_not_exists video}}
+
+
+{{end if_exists main_page}}
+
+
+
+{{if_not_exists main_page}}
+
+{{if_exists header_banner}}
+<!-- Banner superior -->
+<div class="container-fluid" style="padding: 0px;">
+<div class="col-12" id="topBannerDiv">
+<img src="{{header_banner}}" class="img-responsive col-12" style="margin: 0 auto;" alt="{{site_title}}" />
+</div>
+</div>
+{{end if_exists header_banner}}
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark grandient"  id="navDiv"> <!-- menu superior SIN video --->
+<div class="container-fluid">
+<a class="navbar-brand" href="/">{{header}}</a> <!-- Linea superior -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> <!-- boton del menu en la vercion movil -->
+    </button>
+<!-- Menu superior -->
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!-- Secciones del menu superior -->
+{{categories}}
+{{if_not_exists subcategories}}
+ <li class="nav-item"><a class="nav-link{{if_exists current}} active{{end if_exists current}}" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+{{end if_not_exists subcategories}}
+{{if_exists subcategories}}
+ <li class="nav-item dropdown"> <!-- {{if_exists current}} active{{end if_exists current}}" -->
+  <a href="{{category}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a>
+<ul class="dropdown-menu bg-dark rounded-3" role="menu">
+  {{subcategories}}<li><a class="dropdown-item" href="{{category}}">{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</a></li>
+  {{end subcategories}}
+  </ul>
+ </li>
+ {{end if_exists subcategories}}
+{{end categories}}
+{{if_exists shop}}
+  {{shop_catalog}}
+  {{if_exists shop_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{shop_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de precios</a></li>
+  {{end if_exists shop_price}}
+{{end if_exists shop}}
+{{if_exists nedv}}
+  {{nedv_catalog}}
+  {{if_exists nedv_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{nedv_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de inmobiliaria</a></li>
+  {{end if_exists nedv_price}}
+{{end if_exists nedv}}
+{{if_exists auto}}
+  {{auto_catalog}}
+  {{if_exists auto_price}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="{{auto_price}}" target="_blank"><i class="bi bi-tags"></i> Lista de autos</a></li>
+  {{end if_exists auto_price}}
+{{end if_exists auto}}
+</ul>
+<ul class="navbar-nav">
+{{if_exists facebook}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{facebook}}">
+<i class="bi bi-facebook"></i>
+</a>
+</li>
+{{end if_exists facebook}}
+{{if_exists pinterest}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{pinterest}}">
+<i class="bi bi-pinterest"></i>
+</a>
+</li>
+{{end if_exists pinterest}}
+{{if_exists twitter}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{twitter}}">
+<i class="bi bi-twitter"></i>
+</a>
+</li>
+{{end if_exists twitter}}
+{{if_exists instagram}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{instagram}}">
+<i class="bi bi-instagram"></i>
+</a>
+</li>
+{{end if_exists instagram}}
+{{if_exists telegram}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{telegram}}">
+<i class="bi bi-telegram"></i>
+</a>
+</li>
+{{end if_exists telegram}}
+{{if_exists youtube}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{youtube}}">
+<i class="bi bi-youtube"></i>
+</a>
+</li>
+{{end if_exists youtube}}
+{{if_exists tiktok}}
+<li class="nav-item">
+<a class="nav-link" style="font-size: 16pt;" href="{{tiktok}}">
+<i class="bi bi-tiktok"></i>
+</a>
+</li>
+{{end if_exists tiktok}}
+<!-- Color modes selector
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown me-2 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Claro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Oscuro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+ end Color modes selector -->
+</ul>
+  <form method="post" action="?act=search">
+<div class="input-group">
+      <input type="text" class="form-control search-bar" placeholder="Buscar..." style="display: inline-block;" name="pattern" aria-describedby="button-addon2" value="{{pattern}}">
+    <button type="submit" class="btn btn-outline-secondary" style="font-size: medium;" type="button" id="button-addon2" >OK</button>
+</div>
+  </form>
+<ul class="nav navbar-nav navbar-right">
+{{if_exists shop}}
+<!-- Modulo de tienda en linea -->
+{{if_not_exists shop_basket_num}}
+   <li class="nav-item"><a class="nav-link" href="?show=shop_basket" title="Carrito de compras"><i class="bi bi-cart"></i>/*{{shop_basket_num}} / {{shop_basket_amount}} usd.*/</a></li>
+{{end if_not_exists shop_basket_num}}
+{{if_exists shop_basket_num}}
+  <li class="nav-item"><a class="nav-link"  href="?show=shop_basket" title="Carrito de compras ({{shop_basket_num}})" style="color:#F5F5F5;"><i class="bi bi-cart"></i> ({{shop_basket_num}})</a></li>
+{{end if_exists shop_basket_num}}
+{{end if_exists shop}}
+</ul>
+        </div>
+</div>
+</nav>
+
+{{end if_not_exists main_page}}
+
+<div class="FON">
+
+{{if_exists main_page}}
+{{if_exists announce}}
+<!-- Jumbotron container -->
+<div class="container-fluid elcontainer">
+    <div class="col-12">
+      <div class="jumbotron border border-dashed rounded-3">
+{{announce}}
+      </div>
+    </div>
+</div><!-- /Jumbotron container -->
+{{end if_exists announce}}
+{{end if_exists main_page}}
+
+{{if_not_exists main_page}}
+/*<div style="height: 90px;"></div>*/
+{{end if_not_exists main_page}}
+
+<div class="container-fluid">
+<div class="row"> <!--  style="flex-direction:row-reverse;" -->
+
+
+
+
+
+<!-- Main content -->
+<div class="col-12" style="padding-right: 0px;padding-left: 0px;">
+
+
+{{if_exists video}}
+{{if_not_exists isMobile}}
+{{if_exists main_page}}
+{{if_exists carousel}}
+{{bslider}}
+{{end if_exists carousel}}
+{{if_exists hslider}}
+<div style="height: 430px;">
+{{hslidertpl}}
+</div>
+{{end if_exists hslider}}
+{{if_exists vslider}}
+{{vslidertpl}}
+{{end if_exists vslider}}
+{{end if_exists main_page}}
+{{end if_not_exists isMobile}}
+{{end if_exists video}}
+
+{{if_not_exists video}}
+{{if_exists main_page}}
+{{if_exists carousel}}
+{{bslider}}
+{{end if_exists carousel}}
+{{if_exists hslider}}
+<div style="height: 430px;">
+{{hslidertpl}}
+</div>
+{{end if_exists hslider}}
+{{if_exists vslider}}
+{{vslidertpl}}
+{{end if_exists vslider}}
+{{end if_exists main_page}}
+{{end if_not_exists video}}
+
+<div class="card elcontainer{{if_exists main_page}}{{if_exists hslider}} mt-3{{end if_exists hslider}}{{if_exists vslider}} mt-3{{end if_exists vslider}}{{end if_exists main_page}}">
+  <div class="card-header grandient" id="cardHeaderDiv">
+{{if_exists name}}
+<!-- *** Page Title *** -->
+<h1>{{if_exists icon}}<i class="bi bi-{{icon}}"></i> {{end if_exists icon}}{{name}}</h1>
+{{end if_exists name}}
+  </div>
+  <div class="card-body" id="CardBody">
+<!-- *** Last Items *** -->
+{{if_exists last_items}}<div>{{last_items}}</div>{{end if_exists last_items}}
+
+<!-- *** Center page content *** -->
+
+{{content}}
+
+  </div>
+</div>
+
+{{if_exists video}}
+{{if_exists isMobile}}
+{{if_exists main_page}}
+{{if_exists carousel}}
+{{bslider}}
+{{end if_exists carousel}}
+{{if_exists hslider}}
+<div style="height: 430px;">
+{{hslidertpl}}
+</div>
+{{end if_exists hslider}}
+{{if_exists vslider}}
+{{vslidertpl}}
+{{end if_exists vslider}}
+{{end if_exists main_page}}
+{{end if_exists isMobile}}
+{{end if_exists video}}
+
+</div><!-- /Main content -->
+<!-- Sidebar -->
+<div class="col-xs-12 col-lg-6 col-lg-pull-6" style="margin-bottom: 20px;">
+<div class="position-sticky" style="top: 60px">
+{{if_exists left_content}}
+<!-- *** Section Left *** -->
+<div class="card elcontainer{{if_exists main_page}}{{if_exists hslider}} mt-3{{end if_exists hslider}}{{if_exists vslider}} mt-3{{end if_exists vslider}}{{end if_exists main_page}}">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{left_name}}</h3>
+  </div>
+  <div class="card-body">
+    {{left_content}}
+  </div>
+</div>
+{{end if_exists left_content}}
+
+{{if_exists left_content2}}
+<!-- *** Section Left 2 *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{left_name2}}</h3>
+  </div>
+  <div class="card-body">
+    {{left_content2}}
+  </div>
+</div>
+{{end if_exists left_content2}}
+{{if_exists phrase}}
+<!-- *** Day phrase *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">Frase del dia</h3>
+  </div>
+  <div class="card-body">
+    {{phrase}}
+  </div>
+</div>
+{{end if_exists phrase}}
+</div>
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-lg-6 col-lg-pull-6 Right-Section" style="margin-bottom: 20px;">
+{{if_exists logo}}
+<!-- *** Logo *** -->
+<div class="elcontainer panel-left">
+<div style="text-align: center;"><a href="./" class="logo"><img src="{{logo}}"></a></div>
+</div>
+{{end if_exists logo}}
+<ul class="nav nav-pills flex-column elcontainer">
+{{if_exists auto}}
+<!-- Modulo Concecionario de autos -->
+  <li class="nav-item rounded-3"><a class="nav-link" href="./?act=s_auto_add"><i class="bi bi-plus-circle"></i> Añadir auto</a></li>
+  {{if_exists auto_basket_num}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="?show=auto_basket"><i class="bi bi-cart"></i> Autos seleccionados ({{auto_basket_num}})</a></li>
+  {{end if_exists auto_basket_num}}
+  {{auto_catalog2}}
+{{end if_exists auto}}
+{{if_exists nedv}}
+<!-- Modulo de Inmobiliaria -->
+  <li class="nav-item rounded-3"><a class="nav-link" class="category-top" href="./?act=s_nedv_add"><i class="bi bi-plus-circle"></i> Añadir Inmobiliaria</a></li>
+  {{if_exists nedv_basket_num}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="?show=nedv_basket"><i class="bi bi-cart"></i> Inmobiliaria seleccionada ({{nedv_basket_num}})</a></li>
+  {{end if_exists nedv_basket_num}}
+  {{nedv_catalog2}}
+{{end if_exists nedv}}
+{{if_exists shop}}
+<!-- Modulo Tienda en linea -->
+  {{if_exists shop_basket_num}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="?show=shop_basket"><i class="bi bi-cart"></i> Carrito de compras ({{shop_basket_num}} / {{shop_basket_amount}} usd.)</a></li>
+  {{end if_exists shop_basket_num}}
+  {{shop_catalog2}}
+{{end if_exists shop}}
+{{if_exists news}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="/?act=s_add"><i class="bi bi-plus-circle"></i> Añadir articulo</a></li>
+  <li class="nav-item rounded-3"><a class="nav-link" id="ArchLink"><i class="bi bi-newspaper"></i> Archivo de numeros</a></li>
+<script>
+    const date = new Date();
+    const fmt = new Intl.DateTimeFormat('en', { timeZone: 'America/New_York' });
+    const parts = fmt.formatToParts(date);
+    let year, month, day;
+    for (const part of parts) {
+        switch (part.type) {
+            case 'year':
+                year = parseInt(part.value);
+                break;
+            case 'month':
+                // note, months are 1-12 (not 0-11 like Date.getMonth)
+                month = parseInt(part.value);
+                break;
+            case 'day':
+                day = parseInt(part.value);
+                break;
+        }
+    }
+
+var Link = document.querySelector('#ArchLink');
+Link.setAttribute('href', '/?act=archive&month=' + month + '&year=' + year);
+
+</script>
+{{end if_exists news}}
+{{if_exists info}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="/?act=s_add"><i class="bi bi-plus-circle"></i> Añadir articulo</a></li>
+{{end if_exists info}}
+{{if_exists reg}}
+  <li class="nav-item rounded-3"><a class="nav-link" href="///{{base_domain}}/cp/login.php"><i class="bi bi-box-arrow-in-right" style="margin-left: -3px;"></i> Iniciar secion</a></li>
+  <li class="nav-item rounded-3"><a class="nav-link" href="///{{base_domain}}/?act=reg_form"><i class="bi bi-person-plus"></i> Registro</a></li>
+{{end if_exists reg}}
+<!-- Secciones del menu lateral -->
+
+{{categories2}}
+{{if_not_exists subcategories2}}
+ <li class="nav-item rounded-3"><a class="nav-link{{if_exists current2}} active{{end if_exists current2}}" href="{{category2}}">{{if_exists icon2}}<i class="bi bi-{{icon2}}"></i> {{end if_exists icon2}}{{name2}}</a></li>
+{{end if_not_exists subcategories2}}
+
+{{if_exists subcategories2}}
+<li class="nav-item dropdown rounded-3"><!-- {{if_exists current2}} active{{end if_exists current2}} -->
+  <a href="{{category2}}"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{{if_exists icon2}}<i class="bi bi-{{icon2}}"></i> {{end if_exists icon2}}{{name2}}</a>
+  <ul class="dropdown-menu-right- dropdown-menu bg-dark rounded-3" role="menu">
+  {{subcategories2}}<li><a class="dropdown-item" href="{{category2}}">{{if_exists icon2}}<i class="bi bi-{{icon2}}"></i> {{end if_exists icon2}}{{name2}}</a></li>
+  {{end subcategories2}}
+  </ul>
+ </li>
+ {{end if_exists subcategories2}}
+{{end categories2}}
+
+ <li class="nav-item mb-0 rounded-3"><a class="nav-link{{if_exists current2}} active{{end if_exists current2}}" href="./?act=feed_add_form"><i class="bi bi-envelope"></i> Enviar mensaje</a></li>
+</ul>
+<div class="position-sticky" style="top: 60px">
+{{if_exists right_content}}
+<!-- *** Right Section *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{right_name}}</h3>
+  </div>
+  <div class="card-body">
+    {{right_content}}
+  </div>
+</div>
+{{end if_exists right_content}}
+
+{{if_exists right_content2}}
+<!-- *** раздел Справа 2 *** -->
+<div class="card elcontainer">
+  <div class="card-header grandient">
+    <h3 class="panel-title">{{right_name2}}</h3>
+  </div>
+  <div class="card-body">
+    {{right_content2}}
+  </div>
+</div>
+{{end if_exists right_content2}}
+</div><!-- /Sidebar -->
+
+</div><!-- /row -->
+
+</div><!-- /container -->
+
+</div><!-- /FON -->
+
+{{if_exists whatsapp}}
+<div id="wpp-fix" class="right shake">
+	<button id="wpp-link" class="wpp-form wpp-link">   <a class="text-white text-decoration" href="https://wa.me/{{whatsapp}}">
+<i class="bi bi-whatsapp" style="width: 22px;font-size: 30px;height: 22px;display: contents;"></i>
+</a>	</button>
+	</div>
+</div>
+{{end if_exists whatsapp}}
+<footer>
+<div class="container container d-flex flex-wrap justify-content-between align-items-center">
+<div class="col-md-4 d-flex align-items-center">
+<!-- Views -->
+Visitas: {{count_all}}
+{{if_exists footer}}
+<!-- Footer -->
+© {{footer}}- {{year}} 
+{{end if_exists footer}}
+</div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+{{if_exists dribbble}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{dribbble}}"><i class="bi bi-dribbble"></i></a>
+</li>{{end if_exists dribbble}}
+{{if_exists skype}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{skype}}"><i class="bi bi-skype"></i></a>
+</li>{{end if_exists skype}}
+{{if_exists spotify}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{spotify}}"><i class="bi bi-spotify"></i></a>
+</li>{{end if_exists spotify}}
+{{if_exists linkedin}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{linkedin}}"><i class="bi bi-linkedin"></i></a>
+</li>{{end if_exists linkedin}}
+{{if_exists vimeo}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{vimeo}}"><i class="bi bi-vimeo"></i></a>
+</li>{{end if_exists vimeo}}
+{{if_exists reddit}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{reddit}}"><i class="bi bi-reddit"></i></a>
+</li>{{end if_exists reddit}}
+{{if_exists strava}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{strava}}"><i class="bi bi-strava"></i></a>
+</li>{{end if_exists strava}}
+{{if_exists stackoverflow}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{stackoverflow}}"><i class="bi bi-stack-overflow"></i></a>
+</li>{{end if_exists stackoverflow}}
+{{if_exists link-1}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-1}}">{{link-1_title}}</a>
+</li>{{end if_exists link-1}}
+{{if_exists link-2}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-2}}">{{link-2_title}}</a>
+</li>{{end if_exists link-2}}
+{{if_exists link-3}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-3}}">{{link-3_title}}</a>
+</li>{{end if_exists link-3}}
+{{if_exists link-4}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-4}}">{{link-4_title}}</a>
+</li>{{end if_exists link-4}}
+{{if_exists link-5}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-5}}">{{link-5_title}}</a>
+</li>{{end if_exists link-5}}
+{{if_exists link-6}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-6}}">{{link-6_title}}</a>
+</li>{{end if_exists link-6}}
+{{if_exists link-7}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-7}}">{{link-7_title}}</a>
+</li>{{end if_exists link-7}}
+{{if_exists link-8}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-8}}">{{link-8_title}}</a>
+</li>{{end if_exists link-8}}
+{{if_exists link-9}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-9}}">{{link-9_title}}</a>
+</li>{{end if_exists link-9}}
+{{if_exists link-10}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-10}}">{{link-10_title}}</a>
+</li>{{end if_exists link-10}}
+{{if_exists link-11}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-11}}">{{link-11_title}}</a>
+</li>{{end if_exists link-11}}
+{{if_exists link-12}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-12}}">{{link-12_title}}</a>
+</li>{{end if_exists link-12}}
+{{if_exists link-a}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-a}}">{{link-a_title}}</a>
+</li>{{end if_exists link-a}}
+{{if_exists link-b}}<li class="ms-3">
+<a class="text-decoration-none fs-4" href="{{link-b}}">{{link-b_title}}</a>
+</li>{{end if_exists link-b}}
+</ul>
+</div>
+</footer>
+</div>
+</div>
+<script>
+let websiteHeight = window.innerHeight;
+let websiteWidth = window.innerWidth;
+{{if_exists main_page}}{{if_exists carousel}}let carouselHeight = document.getElementById("carouselExampleAutoplaying").offsetHeight;{{end if_exists carousel}}{{end if_exists main_page}}
+let cardHeaderHeight = document.getElementById("cardHeaderDiv").offsetHeight;
+let navbarHeight = document.getElementById("navDiv").offsetHeight;
+{{if_exists header_banner}}let bannerHeight = document.getElementById("topBannerDiv").offsetHeight;{{end if_exists header_banner}}
+let CardBody = document.getElementById('CardBody');
+if (websiteWidth > 991) {
+CardBody.setAttribute('style', 'min-height: ' + (websiteHeight{{if_exists header_banner}} - bannerHeight{{end if_exists header_banner}} - navbarHeight - cardHeaderHeight{{if_exists main_page}}{{if_exists carousel}} - carouselHeight{{end if_exists carousel}}{{end if_exists main_page}} - 10) + 'px');
+}
+</script>
+</body>
+
+</html>
