@@ -3,9 +3,9 @@
   <type>template</type>
   <user_id>500</user_id>
   <title>
-    <ru>1-CMLBSC</ru>
-    <en>1-CMLBSC</en>
-    <es>1-CMLBSC</es>
+    <ru>1-CMLBSC1</ru>
+    <en>1-CMLBSC1</en>
+    <es>1-CMLBSC1</es>
   </title>
   <description>
     <ru>
@@ -18,8 +18,8 @@
       Diseño adaptivo a todos los dispositivos, puede ser un Sitio web personal, Solo para sitios web con numero máximo de 5 secciones
     </es>
   </description>
-  <view_image>1-CMLBSC.jpg </view_image>
+  <view_image>1-CMLBSC1.jpg </view_image>
   <columns>1</columns>
-  <color>Rojo-Violeta</color>
+  <color>Violeta</color>
 </body>
 
