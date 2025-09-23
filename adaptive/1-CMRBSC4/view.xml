@@ -3,9 +3,9 @@
   <type>template</type>
   <user_id>500</user_id>
   <title>
-     <ru>1-CMRBSC</ru>
-     <en>1-CMRBSC</en>
-     <es>1-CMRBSC</es>
+     <ru>1-CMRBSC4</ru>
+     <en>1-CMRBSC4</en>
+     <es>1-CMRBSC4</es>
   </title>
   <description>
   <ru>
@@ -18,7 +18,7 @@
      Diseño adaptivo a todos los dispositivos, puede ser un Sitio web personal, Solo para sitios web con numero máximo de 5 secciones
   </es>
   </description>
-  <view_image>1-CMRBSC.jpg </view_image>
+  <view_image>1-CMRBSC4.jpg </view_image>
   <columns>1</columns>
-  <color>Violeta</color>
+  <color>Azul</color>
 </body>
