@@ -1,7 +1,7 @@
 .dark {
-	--bs-site-bg: radial-gradient(#5bdb42, #27b070, #41d25e);
+	--bs-site-bg: radial-gradient(#12f9f5, #074266, #077c7c);
 	--bs-site-color: #ffffff;
-	--bs-menu-bg: linear-gradient(to left, #9b67e8, #2f49b9);
+	--bs-menu-bg: linear-gradient(to bottom, #0b342f, #07663f);
 	--bs-menu-color: #ffffff;
 	--bs-menu-li-bg: transparent;
 	--bs-menu-fz: 15pt;
@@ -19,11 +19,11 @@
 	--bs-jumbotron-fz: 21px;
 	--bs-sidebar-mb: 3px;
 	--bs-site-fz: 20px;
-	--bs-cards-bg: #21293b;
-	--bs-cards-bc: #21293b;
+	--bs-cards-bg: #083225;
+	--bs-cards-bc: #031d59;
 	--bs-cards-title-fz: 26px;
 	--bs-cards-h3-fz: 20px;
-	--bs-caption-bg: #1d2d4e;
+	--bs-caption-bg: #1b4632;
 	--bs-error-text-color: #ff6bb7;
 	--bs-price-btn-bg: #0e75a8;
 	--bs-hover-price-btn-bg: #823fb0;
@@ -60,7 +60,7 @@
 	--bs-video-btn-hover-color: #ffffff;
 	--bs-video-btn-hover-bg: #c700ff;
 	--bs-footer-fz: 15px;
-	--bs-footer-link-color: #ceff43;
+	--bs-footer-link-color: #ffcb30;
 	--bs-footer-link-hover-color: #66ffbb;
 	--bs-footer-link-visited-color: #ffffbb;
 	--bs-navbar-mr: 0px;

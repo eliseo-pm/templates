@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <type>template</type>
+  <user_id>500</user_id>
+  <title>
+    <ru>3-CMRBS</ru>
+    <en>3-CMRBS</en>
+    <es>3-CMRBS</es>
+  </title>
+  <description>
+    <ru>
+      Адаптивный дизайн для всех устройств, может быть личным сайтом, интернет-магазином, автосалоном, агентством недвижимости, газетой или онлайн-журналом.
+    </ru>
+    <en>
+      Adaptive design for all devices, can be a personal website, online store, car dealership, real estate agency, newspaper, or online magazine.
+    </en>
+    <es>
+      Diseño adaptivo a todos los dispositivos, puede ser un Sitio web personal, Tienda en linea, Concesionario de autos, Inmobiliaria, Periodico o Revista en linea
+    </es>
+  </description>
+  <view_image>3-CMRBS.jpg </view_image>
+  <columns>3</columns>
+  <color>Cafe</color>
+</body>
+
+
