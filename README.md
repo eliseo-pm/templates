@@ -1,4 +1,4 @@
-# 🚀 Templates Repository <sup><kbd>Pre-release</kbd></sup>
+# 🚀 Templates Repository <sup><kbd>v1.0.0</kbd></sup>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](../../pulls)
